@@ -1,0 +1,5 @@
+BACK>12'DE OKB12 
+BACK>14'DE OKB14 
+FRONT>13'DE OKF13 
+
+BACK>1>Seb1 Frame kaydığı için yanlış
