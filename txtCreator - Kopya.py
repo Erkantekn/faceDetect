@@ -77,16 +77,17 @@ for mainDir in os.listdir(path):
                     pointY=pointY+oran
                 if k==100:    
                     pointX=pointX+oran
-                if k==43:    
+                if k==43 or k==111:    
                     size=size+oran
-                if k==45:    
+                if k==45 or k==108:    
                     size=size-oran
                 if k==13:
                     break
                 if k==27:
                     exit(0)
+                bbox = (pointX,pointY,size,size)
                 img=copy.deepcopy(orgImg)
-                draw_bbox(img,bbox = (pointX,pointY,size,size))
+                draw_bbox(img,bbox)
             
             if str(bbox[0])+'-'+str(bbox[1])+'-'+str(bbox[2])+'-'+str(bbox[3]) !="0-0-0-0":
                 with open(path+"\\-data\\TXT\\"+mainDir+"\\"+childDir+"\\"+vid.split('.')[0]+".txt", 'w') as f:
