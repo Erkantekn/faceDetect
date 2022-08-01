@@ -129,7 +129,7 @@ for mainDir in os.listdir(path):
                     savepath=path+"\\-data\\"+mainDir2+"\\"+childDir2+"\\"+vid2.split('.')[0]
                     save_bbox(img, bbox,count,savepath,vid2.split('.')[0])
                     count = count+1
-                    #draw_bbox(img, bbox)
+                    draw_bbox(img, bbox)
 
                 else:
                     log(path+"\\-data\\"+mainDir+"\\"+childDir+"\\"+vid+" -> HATA! TRACK EDİLEMEDİ -> FRAME "+str(count))
@@ -137,7 +137,7 @@ for mainDir in os.listdir(path):
                     #bbox = cv2.selectROI("Tracking", img, False)
                     #tracker.init(img, bbox)
 
-                #cv2.imshow("Tracking", img)
+                cv2.imshow("Tracking", img)
 
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
