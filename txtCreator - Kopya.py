@@ -57,9 +57,9 @@ for mainDir in os.listdir(path):
             orgImg=copy.deepcopy(img)
             bbox=(0,0,0,0)
             pointX=515
-            pointY=225
-            size=250
-            oran=5
+            pointY=180
+            size=290
+            oran=8
             bbox = (pointX,pointY,size,size)
             draw_bbox(img,bbox)
             while True:
